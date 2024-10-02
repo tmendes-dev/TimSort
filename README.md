@@ -1,7 +1,5 @@
 # TimSort in C#
 
-![TimSort Logo](https://via.placeholder.com/150) *(Optional: Add your own logo here)*
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [What is TimSort?](#what-is-timsort)
@@ -16,7 +14,7 @@
 
 ## Introduction
 
-Welcome to the **C# implementation of TimSort**, one of the fastest and most efficient sorting algorithms used in the real world. This implementation is based on the original TimSort algorithm, which is a hybrid sorting algorithm derived from **Merge Sort** and **Insertion Sort**. It is highly optimized for real-world data and is used in Java’s `Arrays.sort()` and Python’s `sorted()` functions.
+Welcome to the **C# implementation of TimSort**, one of the fastest and most efficient sorting algorithms used in the real world. This implementation is based on the original TimSort algorithm, which is a hybrid sorting algorithm derived from **Merge Sort** and **Insertion Sort**. It is highly optimized for real-world data and is used in Javaâ€™s `Arrays.sort()` and Pythonâ€™s `sorted()` functions.
 
 This repository provides a **robust and reliable version** of TimSort in C# with features like **logging** for tracking performance and sorting details. The project is designed to work efficiently with both small and large datasets, handling edge cases and providing detailed performance metrics using **Serilog** for logging.
 
@@ -30,7 +28,7 @@ TimSort is a **hybrid sorting algorithm** that combines:
 - **Merge Sort**: Efficient for large datasets and ensures stable sorting.
 - **Insertion Sort**: Optimal for small datasets, providing quick sorting for small subsequences.
 
-TimSort is widely used in high-performance applications, including Python’s `sorted()` and Java's `Arrays.sort()`.
+TimSort is widely used in high-performance applications, including Pythonâ€™s `sorted()` and Java's `Arrays.sort()`.
 
 ---
 
