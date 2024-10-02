@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TimSort</name>
+    </assembly>
+    <members>
+        <member name="T:TimSort.Program">
+            <summary>
+            The main program that demonstrates the TimSort algorithm.
+            </summary>
+        </member>
+        <member name="M:TimSort.Program.ConfigureLogging">
+            <summary>
+            Configures the logging settings.
+            </summary>
+        </member>
+        <member name="M:TimSort.Program.DisplayWelcomeMessage">
+            <summary>
+            Displays a welcome message to the user.
+            </summary>
+        </member>
+        <member name="M:TimSort.Program.GetArraySize">
+            <summary>
+            Prompts the user for the size of the array.
+            </summary>
+            <returns>The array size inputted by the user.</returns>
+        </member>
+        <member name="M:TimSort.Program.GetArrayInput(System.Int32)">
+            <summary>
+            Prompts the user to choose between entering a custom array or generating a random one.
+            </summary>
+            <param name="arraySize">The size of the array.</param>
+            <returns>An array inputted by the user or generated randomly.</returns>
+        </member>
+        <member name="M:TimSort.Program.GetCustomArray(System.Int32)">
+            <summary>
+            Prompts the user to enter a custom array of the specified size.
+            </summary>
+            <param name="arraySize">The size of the array.</param>
+            <returns>An array inputted by the user.</returns>
+        </member>
+        <member name="M:TimSort.Program.GenerateRandomArray(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Generates a random array of the specified size with values between the given bounds.
+            </summary>
+            <param name="size">The size of the array.</param>
+            <param name="minValue">The minimum value for random number generation.</param>
+            <param name="maxValue">The maximum value for random number generation.</param>
+            <returns>A randomly generated array.</returns>
+        </member>
+        <member name="M:TimSort.Program.DisplaySortedResult(System.Int32[])">
+            <summary>
+            Displays the result of the sorting operation.
+            </summary>
+            <param name="arrayToSort">The sorted array.</param>
+        </member>
+        <member name="M:TimSort.Program.IsSorted(System.Int32[])">
+            <summary>
+            Checks if the array is sorted in ascending order.
+            </summary>
+            <param name="array">The array to check.</param>
+            <returns>True if the array is sorted, false otherwise.</returns>
+        </member>
+        <member name="M:TimSort.Program.GetIntegerInput(System.String,System.Int32)">
+            <summary>
+            Prompts the user to enter an integer value, with optional default value.
+            </summary>
+            <param name="prompt">The prompt message for the user.</param>
+            <param name="defaultValue">The default value if the user doesn't enter anything.</param>
+            <returns>The integer entered by the user, or the default value.</returns>
+        </member>
+        <member name="M:TimSort.Program.DisplayErrorMessage">
+            <summary>
+            Displays an error message to the user if an exception occurs.
+            </summary>
+        </member>
+        <member name="T:TimSort.TimSort`1">
+            <summary>
+            Represents an implementation of the TimSort sorting algorithm.
+            </summary>
+            <typeparam name="T">The type of elements in the array to be sorted.</typeparam>
+        </member>
+        <member name="M:TimSort.TimSort`1.#ctor(`0[],System.Comparison{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:TimSort.TimSort`1"/> class.
+            </summary>
+            <param name="array">The array to be sorted.</param>
+            <param name="compare">The comparison delegate used for sorting.</param>
+        </member>
+        <member name="M:TimSort.TimSort`1.Sort">
+            <summary>
+            Sorts the specified array using the TimSort algorithm.
+            </summary>
+        </member>
+        <member name="M:TimSort.TimSort`1.MinRunLength(System.Int32)">
+            <summary>
+            Determines the minimum run length for the specified number of elements.
+            </summary>
+            <param name="n">The number of elements.</param>
+            <returns>The minimum run length.</returns>
+        </member>
+        <member name="M:TimSort.TimSort`1.BinaryInsertionSort(`0[],System.Int32,System.Int32,System.Int32,System.Comparison{`0})">
+            <summary>
+            Performs a binary insertion sort on the specified sub-array.
+            </summary>
+            <param name="array">The array to sort.</param>
+            <param name="lo">The starting index of the sub-array.</param>
+            <param name="hi">The ending index of the sub-array.</param>
+            <param name="start">The starting index for insertion.</param>
+            <param name="compare">The comparison delegate used for sorting.</param>
+        </member>
+        <member name="M:TimSort.TimSort`1.MakeAscendingRun(System.Int32,System.Int32)">
+            <summary>
+            Creates an ascending run in the specified sub-array.
+            </summary>
+            <param name="lo">The starting index of the sub-array.</param>
+            <param name="hi">The ending index of the sub-array.</param>
+            <returns>The length of the run.</returns>
+        </member>
+        <member name="M:TimSort.TimSort`1.PushRun(System.Int32,System.Int32)">
+            <summary>
+            Pushes the specified run onto the run stack.
+            </summary>
+            <param name="runStart">The start index of the run.</param>
+            <param name="runLength">The length of the run.</param>
+        </member>
+        <member name="M:TimSort.TimSort`1.MergeRuns">
+            <summary>
+            Merges runs in the run stack.
+            </summary>
+        </member>
+        <member name="M:TimSort.TimSort`1.ForceMergeRuns">
+            <summary>
+            Forces the merging of runs in the run stack until only one remains.
+            </summary>
+        </member>
+        <member name="M:TimSort.TimSort`1.MergeAt(System.Int32)">
+            <summary>
+            Merges the two runs at the specified index.
+            </summary>
+            <param name="i">The index of the runs to merge.</param>
+        </member>
+        <member name="M:TimSort.TimSort`1.MergeLow(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Merges the two runs where the first run is in the original array and the second run is in a temporary array.
+            </summary>
+            <param name="start1">The starting index of the first run.</param>
+            <param name="length1">The length of the first run.</param>
+            <param name="start2">The starting index of the second run.</param>
+            <param name="length2">The length of the second run.</param>
+        </member>
+        <member name="M:TimSort.TimSort`1.MergeHigh(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Merges the two runs where the second run is in a temporary array and the first run is in the original array.
+            </summary>
+            <param name="start1">The starting index of the first run.</param>
+            <param name="length1">The length of the first run.</param>
+            <param name="start2">The starting index of the second run.</param>
+            <param name="length2">The length of the second run.</param>
+        </member>
+    </members>
+</doc>
