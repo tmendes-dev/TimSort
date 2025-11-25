@@ -1,5 +1,7 @@
 # TimSort in C#
 
+## How to use it: Clone this repo and reutilize TimSort.cs and its unit tests.
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [What is TimSort?](#what-is-timsort)
